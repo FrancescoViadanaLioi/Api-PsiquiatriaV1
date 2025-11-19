@@ -82,8 +82,6 @@ export async function deleteProfissional(req: Request<{ id: string }>, res: Resp
         }
 
         const profissionalDeletado = await profissionalService.deleteProfissional(id);
-
-        // 200 OK (Ou 204 No Content, dependendo da sua preferência)
         return res.status(200).json(profissionalDeletado);
 
     } catch (error) {
