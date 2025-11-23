@@ -1,4 +1,4 @@
-import * as profissionalRepository from "../repositories/profissional.entity.js"
+import * as profissionalRepository from "../repositories/profissional.repository.js"
 
 export async function createProfissional(){
 
