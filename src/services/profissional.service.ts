@@ -1,4 +1,3 @@
-import * as profissionalRepository from "../repositories/profissional.entity.js"
 import type { ProfissionalBody } from "../controllers/profissional.c.js";
 import type Profissional from '../entities/profissional.entity.js';
 
@@ -10,7 +9,9 @@ export async function getAllProfissionais() {
 
 }
 
-export async function getProfissionalById(id: number): Promise<Profissional | null>{}
+export async function getProfissionalById(id: number): Promise<Profissional | null>{
+    return null;
+}
 
 export async function updateProfissional(id: number, data: Partial<ProfissionalBody>){
 
