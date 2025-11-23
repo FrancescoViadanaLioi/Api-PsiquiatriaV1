@@ -1,7 +1,6 @@
-import { Request, Response } from "express";
+import type {Request, Response} from "express";
 import * as profissionalService from "../services/profissional.service.js"
-
-interface ProfissionalBody {
+export interface ProfissionalBody {
     nome: string;
     especialidade: string;
     registroConselho: string;
@@ -57,7 +56,7 @@ export async function getProfissionalById(req: Request<{ id: string }>, res: Res
 export async function updateProfissional(req: Request<{ id: string }, {}, Partial<ProfissionalBody>>, res: Response) {
     try {
         const id = parseInt(req.params.id);
-        const data = req.body;
+        const data: Partial<ProfissionalBody> = req.body;
 
         if (isNaN(id)) {
              return res.status(400).json({ error: "ID inválido." });
