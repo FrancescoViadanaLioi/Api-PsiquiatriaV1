@@ -1,4 +1,3 @@
-
 import { Router } from 'express';
 import { 
     createProfissional, 
@@ -11,7 +10,6 @@ import {
 const router = Router();
 
 router.post('/', createProfissional);
-
 router.get('/', getAllProfissionais);
 
 router.get('/:id', getProfissionalById);
